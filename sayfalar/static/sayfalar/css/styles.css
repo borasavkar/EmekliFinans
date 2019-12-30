@@ -1,0 +1,261 @@
+/* Floating Button Styles */
+.max1920px{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.box img {
+    filter:drop-shadow(5px 5px 10px black);
+  } 
+
+.floating {
+    position: fixed;
+    right: 0    
+}
+
+.home_link {
+    position: fixed;
+    float: right;
+    overflow: visible;
+    z-index: 10000;
+    bottom: 0
+}
+
+.home_link a {
+    font-size: 50px
+}
+
+#whatsapp {
+    position: fixed;
+    float: right;
+    right: 0;
+    overflow: visible;
+    bottom: 0;
+    align-content: center;
+    filter:drop-shadow(1px 1px 1px green);
+}
+
+#whatsapp a {
+    font-size: 50px
+}
+
+.a_floating_kredi_basvurusu {
+    right: 0px;
+    margin-right: 10px;
+    float: right;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 40%;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+	-webkit-transform-origin: right;
+	-ms-transform-origin: right;
+    transform-origin: right;
+    background: #000000;
+    border: 2px solid #e8491d;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px;    
+}
+
+.p_floating_kredi_basvusuru {
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    margin: 0px 5px 5px 5px;
+    word-spacing: 5px
+}
+
+.tel-floating {
+    font-size: 2vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    filter:drop-shadow(1px 1px 5px white);
+}
+
+.tel-floating img {
+    line-height: 50px;
+    padding: 7px
+}
+
+
+/*BOXES*/
+
+.centered {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    right: 10%
+}
+
+.centeredTop {
+    position: absolute;
+    left: 10%;
+    top: 3%;
+    right: 10%
+}
+
+.containerEF {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 5vw;
+    z-index: -1
+}
+
+
+.containerEF img {
+    max-height: 507px
+}
+
+.containerEF h2 {
+    font-size: 1em;
+}
+
+.definition {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    padding: 50px 0px;    
+}
+
+.definition p {
+    padding: 10px 0px
+}
+
+
+/*Definition */
+
+.definition_small_div {
+    bottom: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.definition_small {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Social Media */
+
+/*#social_media {
+    border-top: 1px solid #000000
+}*/
+
+#social_media a {
+    margin: 25px 10px
+}
+
+#social_media img {
+    width: 7vw;
+    height: 7vh
+}
+#google-badge{
+width: 15vw; height: 5.81vw;
+}
+
+/* Checkbox Style */
+
+.kanun {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;	
+    user-select: none
+}
+
+.kanun input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer
+}
+
+.kanun_checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee
+}
+
+.kanun:hover input~.kanun_checkbox {
+    background-color: #ccc
+}
+
+.kanun input:checked~.kanun_checkbox {
+    background-color: #2196F3
+}
+
+.kanun_checkbox:after {
+    content: "";
+    position: absolute;
+    display: none
+}
+
+.kanun input:checked~.kanun_checkbox:after {
+    display: block
+}
+
+.kanun .kanun_checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+
+/*Autocomplete Banks STYLE */
+
+
+/*the container must be positioned relative:*/
+
+.autocomplete {
+    position: relative;
+    display: block
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4
+}
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9
+}
+@media screen and (min-width: 1920px){
+#krediAlamiyorum{font-size: 65%}
+}

@@ -1,0 +1,20 @@
+{% load static %}
+{% load webp_converter %}
+<!-- Social Media -->
+<div class="width100 txt_center heightAuto max1920px" id="social_media">
+    <a class="display_Inline_Block width_auto heightAuto" id="whatsapp_contact" href="https://api.whatsapp.com/send?phone=905397436920&text=Emekliyim,%20kredi%20almak%20istiyorum" target="_blank">
+        <img id="img_whatsapp_contact" src=" {% static 'sayfalar/img/whatsapp.svg' %}" alt="whatsapp"></a>
+    <a class="display_Inline_Block width_auto heightAuto" id="fb_link" href="https://www.facebook.com/emeklifinans" target="_blank"><img src="{% static 'sayfalar/img/facebook.svg' %}" alt="facebook Emekli Finans"></a>
+    <a class="display_Inline_Block width_auto heightAuto" id="ins_link" href="https://www.instagram.com/emeklifinans/" target="_blank"><img src="{% static_webp 'sayfalar/img/Instagram_EmekliFinans.png' 75 %}" alt="instagram Emekli Finans" style="max-height: inherit;"></a>
+    <a class="display_Inline_Block width_auto heightAuto" id="twitter_link" href="https://twitter.com/EmekliFinans" target="_blank">
+        <img src="{% static 'sayfalar/img/Twitter_EmekliFinans.svg' %}" alt="twitter Emekli Finans">
+    </a>
+    <a class="display_Inline_Block width_auto height24dp" id="youtube_link" href="https://www.youtube.com/channel/UCF1I7PjXg3vXlTnRVbmC2AQ" target="_blank">
+        <img src="{% static 'sayfalar/img/youtube.svg' %}" alt="youtube Emekli Finans Channel">
+    </a>
+    <a class="display_Inline_Block width_auto heightAuto" id="contact_mail_link" href="mailto:bilgi@emeklifinans.com?Subject=Kredi-Çekmek-İstiyorum">
+        <img id="img_mail" src="{% static 'sayfalar/img/mail_Emekli_Finans.svg' %}" alt="Emekli Finans mail">
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.emeklifinans.emeklifinans"><img id="google-badge" alt="Google Play'den alın" src="https://play.google.com/intl/en_us/badges/images/generic/tr_badge_web_generic.png" style="width: 15vw" /></a>
+</div>
+<!-- End of Social Media -->

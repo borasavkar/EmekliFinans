@@ -1,0 +1,169 @@
+{% load static %}
+<!-- MODAL KREDİ BAŞVURUSU -->
+<!-- jQuery for input-->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<!-- jQuery scripts -->
+<!-- <script src="{% static 'sayfalar/js/jquery-3.4.1.min.js' %}"></script> -->
+
+<!-- End Of jQuery scripts -->
+<!--  MODAL HTML -->
+    <div id="openModal" class="modalDialog">
+        <div>
+            <!-- FORM -->
+            <form id="regForm" method="post" action="basvuru.php">
+                <a href="#close" title="Close" class="close">X</a>
+                <div class="header">
+                    <h2 class="form_header">Kredi Başvuru Formu</h2>
+                    <h2 class="form_header2">Bilgileriniz <span class="font-italic">Emekli<span class="black">Finans<span class="sup">&reg;</span></span> Güvencesinde Gizli Tutulup Kesinlikle Paylaşılmamaktadır.</span>
+                    </h2>
+                </div>
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                    <!-- Tc -->
+                    <p class="form_Input">
+                        <label for="tcno">T.C. Kimlik No:</label>
+                        <input required id="tcno" placeholder="T.C. Kimlik Numarınız" oninput="this.className = ''" name="Tc" autocomplete="on" type="number" class="input">
+                    </p>
+                    <div id="uyari"></div>
+                    <!-- script TC NO -->
+                    <script src="{% static 'sayfalar/js/tcnoValidate.min.js' %}"></script>
+                    <!-- script TC NO -->
+                    <!-- #TC -->
+                    <!-- AD-SOYAD -->
+                    <p class="form_Input">
+                        <label for="ad">Ad - Soyad:</label>
+                        <input id="ad" placeholder="Ad - Soyad" oninput="this.className = ''" name="ad" type="text" required autocomplete="on" class="input">
+                    </p>
+                    <div id="uyariAd"></div>
+                    <!-- Script Ad Uyari -->
+<script>
+var adsoyad=document.getElementById("ad"),uyariAd=document.getElementById("uyariAd");adsoyad.onkeydown=function(){uyariAd.textContent=""};adsoyad.onblur=function(){try{if(""===adsoyad.value)throw"Lütfen Adınızı Soyadınızı Yazınız.";}catch(a){uyariAd.textContent=a,adsoyad.focus()}};
+</script>
+<!-- Script Ad Uyarı -->
+<!-- #AD-SOYAD -->
+<!-- TELEFON -->
+<p class="form_Input">
+    <label for="tel">Telefon Numaranız</label>
+    <input required id="tel" placeholder="(05__) ___ __ __" oninput="this.className = ''" name="tel" type="tel" autocomplete="on" minlength="10" maxlength="11" size="11">
+</p>
+<div id="uyariTel"></div>
+<!-- #TELEFON -->
+<!-- EMEKLİ MİSİNİZ -->
+<p class="form_Input bold">Emekli Misiniz?</p>
+<div class="checkbox_Buttons" id="checkbox_evethayir">
+    <input type="button" class="evet" value="evet" name="evet" id="evet" onclick="nextPrev(1);document.getElementById('notice').style.display='none'">
+    <input type="button" class="hayir" value="hayır" name="hayır" id="hayir" onclick="getElementById('maasKurum').value='';getElementById('hayir').value='hayır';document.getElementById('notice').style.display='block'">
+</div>
+<div id="notice" class="hidden" style="color: #ff0000;margin-top: 2vh">
+    <span class="highlight">Emekli</span><span class="font-italic black">Finans<span class="sup">&reg;</span></span> sadece emekli, dul, yetim, gazilere hizmet vermektedir.
+</div>
+<!-- #EMEKLİ MİSİNİZ -->
+    </div>
+    <!-- TAB2 -->
+    <div class="tab">
+        <!-- AUTO COMPLETE BANKS -->
+        <div class="autocomplete" id="autocomplete">
+            <p id="kurum" class="form_Input">
+                <label for="maasKurum">Emekli Maaşınızı Aldığınız Banka Adı</label>
+                <input placeholder="Maaş Bankanız" oninput="this.className = ''" name="maasKurum" id="maasKurum" type="text" autocomplete="off" required autofocus></p>
+        </div>
+        <p>
+        </p>
+        <script async src="{% static 'sayfalar/js/autoComplete.min.js' %}"></script>
+        <!-- END OF AUTO COMPLETE BANKS -->
+        <p class="form_Input bold" style="margin-top: 20px">
+            <span class="underline">Emekli Maaşı Aldığınız Bankada</span> Mevcut Krediniz Var Mı?
+        </p>
+        <p class="checkbox_Buttons" id="checkbox2">
+            <input type="button" class="evet" value="evet" onclick="document.getElementById('kredi').style.display='block';document.getElementById('krediTutari').style.display='block';getElementById('krediTutari').value=''">
+            <input type="button" class="hayir" value="hayır" onclick="document.getElementById('krediTutari').value='0';nextPrev(1);document.getElementById('kredi').style.display='none';document.getElementById('krediTutari').style.display='none';">
+        </p>
+        <p id="kredi" class="form_Input hidden">
+            <label for="krediTutari">Varsa Kalan Toplam Kredi Tutarı</label>
+            <input class="money" id="krediTutari" placeholder="Kredi Tutarı" oninput="this.className = ''" name="krediTutari" type="tel">
+        </p>
+    </div>
+        <!-- TAB3 -->
+    <div class="tab">
+        <!-- Kredi İHTİYACI -->
+        <p class="form_Input">
+            <label for="Kredi_Talebi">Ne Kadar Kredi İhtiyacınız Var?</label>
+            <select id="Kredi_Talebi" name="Kredi_Talebi" oninput="this.className=''">
+    <option class="Kredi_talebi" value="10.000 TL">10.000 TL</option>
+    <option class="Kredi_talebi" value="15.000 TL">15.000 TL</option>
+    <option class="Kredi_talebi" value="20.000 TL">20.000 TL</option>
+    <option class="Kredi_talebi" value="25.000 TL">25.000 TL</option>	
+    <option class="Kredi_talebi" value="30.000 TL">30.000 TL</option>
+    <option class="Kredi_talebi" value="35.000 TL">35.000 TL</option>
+    <option class="Kredi_talebi" value="40.000 TL">40.000 TL</option>
+    <option class="Kredi_talebi" value="45.000 TL">45.000 TL</option>
+    <option class="Kredi_talebi" value="50.000 TL">50.000 TL</option>
+    <option class="Kredi_talebi" value="55.000 TL">55.000 TL</option>
+    <option class="Kredi_talebi" value="60.000 TL">60.000 TL</option>	
+</select>
+        </p>
+        <!-- END OF Kredi İHTİYACI -->
+        <!-- ŞEHİR -->
+        <p class="form_Input">
+            <label for="city">İkamet Ettiğiniz Şehir</label>
+            <select id="city" name="city" oninput="this.className = ''">
+        <option class="city" value="Istanbul">İstanbul</option>
+        <option class="city" value="Ankara">Ankara</option>
+        <option class="city" value="Izmir">İzmir</option>
+        <option class="city" value="Bursa">Bursa</option>
+        <option class="city" value="diger">Diğer</option>
+</select>
+        </p>
+<!-- KANUN -->
+<!--checkbox Function -->
+<script src="{% static 'sayfalar/js/CheckBoxValidate.Min.js' %}"></script>
+
+<!-- End Of checkbox Function -->            
+<label class="kanun">
+<a href="sayfalar/Docs/KisiselVerilerinKorunmasi.pdf" target="_blank"><span class="underline blue">Kişisel Verilerin Korunması Kanunu hakkında Bilgilendirmeyi</span> okudum, kabul ediyorum.</a>
+<input type="checkbox" name="kanun_tick" id="kanun_tick" onclick="checkedFunction()" checked="true"><span class="kanun_checkbox"></span>
+</label>
+<div id="uyariCheckbox" style="display:none;color: #ff0000">Lütfen Kutucuğu İşaretleyin</div>
+<!-- END OF KANUN -->
+</div>
+<!-- END OF TAB3 -->
+<!-- NEXTPREV BUTTONS -->
+<div style="overflow:auto" class="nextPrev_Buttons">
+    <div class="nextPrevButtons">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Önceki</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Sonraki</button>
+    </div>
+</div>
+<!-- NEXTPREV BUTTONS -->
+<!-- Circles which indicates the steps of the form: -->
+<div style="text-align:center;margin-top:40px">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+</div>   
+</form>
+</div>
+</div>
+<!-- FORMSUCCESS MODAL -->
+<div id="formSuccess" class="modalDialog txt_center">
+    <div style="padding: 10px">
+        <h2><span class="highlight">Emekli</span><span class="font-italic black">Finans<span class="sup">&reg;</span></span>
+</h2>
+<h3>Teşekkürler, Kredi Başvurunuz bize ulaştı.</h3>
+<p>Size mümkün olan en kısa sürede geri dönüş sağlayacağız</p>
+<p>En kısa sürede bilgi almak için bizi her zaman arayabilirsiniz.</p>
+</div>
+</div>
+<script>
+    setTimeout(function() {
+        document.getElementById("formSuccess").style.display = "none";
+    }, 5000);
+</script>
+<!-- #FORMSUCCESS MODAL-->
+<script src="{% static 'sayfalar/js/jquery.maskedinput.js' %}"></script>
+<script src="{% static 'sayfalar/js/currencyNumberFormat.min.js' %} "></script>
+<script src="{% static 'sayfalar/js/format_tel.min.js' %}"></script>
+<!-- RegForm Script -->
+<script src="{% static 'sayfalar/js/formStepperCheckBox.Min.js' %}"></script>
+<!-- RegForm End -->
+<!-- MODAL HTML -->

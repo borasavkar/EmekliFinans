@@ -1,0 +1,85 @@
+<!doctype html>
+{% load static %}
+<html lang="tr" prefix="og: http://ogp.me/ns#" class="no-js">
+<script>document.documentElement.classList.remove("no-js");</script>
+<head>
+{% include "sayfalar/includes/meta.html" %}
+{% include "sayfalar/includes/CssLinks/layoutCssLinks.html" %}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{% static 'sayfalar/css/bootstrap-4.4.1.css' %}">
+{% block css %}
+{% endblock css %}
+{% include "sayfalar/includes/various_head.html" %}
+{% include "sayfalar/includes/google_Analytics.html" %}
+</head>
+<body>
+    {% include "sayfalar/includes/navbar.html" %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} zIndex999">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% block body %}
+    {% endblock body %}
+    <!--About-->
+    {% block about_slide %}      
+    {% endblock about_slide %}
+    {% block about_header %}      
+    {% endblock about_header %}
+    {% block about_main %}      
+    {% endblock about_main %}
+    <!-- End of About-->
+    <!--Contact-->
+    {% block contact_header1 %}      
+    {% endblock contact_header1 %}
+    {% block contact_header2 %}      
+    {% endblock contact_header2 %}
+    {% block mailForm %}     
+    {% endblock mailForm %}
+    <!-- End of Contact -->
+    <!--RegForm-->
+    {% block regForm %}      
+    {% endblock regForm %}
+    <!-- End of RegForm -->
+    <!-- Main Page Boxes-->
+    {% block box1 %}        
+    {% endblock box1 %}
+    {% block box2 %}        
+    {% endblock box2 %}
+    {% block box3 %}      
+    {% endblock box3 %}
+    {% block box4 %}      
+    {% endblock box4 %}
+    {% block box5 %}      
+    {% endblock box5 %}
+    {% block box6 %}      
+    {% endblock box6 %}
+    <!-- end of Main Page Boxes-->
+    {% block comments %}      
+    {% endblock comments %}
+    {% block home_btn %}      
+    {% endblock home_btn %}
+    {% block modalKredi %}
+    {% endblock modalKredi %}
+    {% block whatsapp %}
+    {% endblock whatsapp %}
+    {% block callnow %}
+    {% endblock callnow %}
+    {% block krediBasvur %}
+    {% endblock krediBasvur %}
+    {% block social_media %}
+    {% include "sayfalar/includes/social_media.html" %}
+    {% endblock social_media %}
+    {% block footer %}
+    {% include "sayfalar/includes/footer.html" %}
+    {% endblock footer %}
+        
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'sayfalar/js/jquery-3.4.1.slim.min.js' %}"></script>
+<script src="{% static 'sayfalar/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

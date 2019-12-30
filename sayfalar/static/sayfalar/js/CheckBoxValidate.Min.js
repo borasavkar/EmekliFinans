@@ -1,0 +1,1 @@
+function checkedFunction(){var e=document.getElementById("kanun_tick"),n=document.getElementById("uyariCheckbox");1==e.checked?n.style.display="none":n.style.display="block"}

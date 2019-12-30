@@ -1,0 +1,60 @@
+
+{% extends "sayfalar/layout.html" %}
+
+{% block css %}
+{% include "sayfalar/includes/CssLinks/indexCssLinks.html" %} 
+{% endblock css %}
+
+
+{% block modalKredi %}
+{% include "sayfalar/includes/modal.html" %}
+{% endblock modalKredi %}
+{% block messages-modal %}
+
+{% endblock messages-modal %}
+
+
+{% block box1 %}
+{% include "sayfalar/includes/HomePageBoxes/box1-image.html" %}
+{% include "sayfalar/includes/HomePageBoxes/box1-desc.html" %}
+{% endblock box1 %}
+
+{% block box2 %}
+{% include "sayfalar/includes/HomePageBoxes/box2-image.html" %}
+{% include "sayfalar/includes/HomePageBoxes/box2-desc.html" %}
+{% endblock box2 %}
+
+{% block box3 %}
+{% include "sayfalar/includes/HomePageBoxes/box3-image.html" %}
+{% include "sayfalar/includes/HomePageBoxes/box3-desc.html" %}
+{% endblock box3 %}
+
+{% block box4 %}
+{% include "sayfalar/includes/HomePageBoxes/box4-image.html" %}
+{% include "sayfalar/includes/HomePageBoxes/box4-desc.html" %}
+{% endblock box4 %}
+
+{% block box5 %}
+{% include "sayfalar/includes/HomePageBoxes/box5.html" %}
+{% endblock box5 %}
+
+{% block comments %}
+{% include "sayfalar/includes/comments.html" %}  
+{% endblock comments %}
+
+
+
+
+{% block whatsapp %}
+    {% include "sayfalar/includes/floatingBtns/whatsapp.html" %}
+{% endblock whatsapp %}
+
+{% block callnow %}
+    {% include "sayfalar/includes/floatingBtns/callNow.html" %}
+{% endblock callnow %}
+
+{% block krediBasvur %}
+{% include "sayfalar/includes/floatingBtns/krediBasvur.html" %}
+{% endblock krediBasvur %}
+
+

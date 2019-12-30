@@ -1,0 +1,85 @@
+{% extends 'sayfalar/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+<style>
+  .content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+  .rounded-circle {
+  border-radius: 50% !important;
+}
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+.media-body {
+  -ms-flex: 1;
+  flex: 1;
+}
+.account-heading {
+  font-size: 2.5rem;
+}
+.text-secondary {
+  color: #6c757d !important;
+}
+</style>
+<div class="content">
+<div class="subnav marginTop50px bold" style="background-color: #e8491d;height: 50px;color: white">
+  <div class="txt_center" style="line-height: 50px">{{user}} Hesabı</div>
+</div>
+<div class="content-section" style="margin-top: 50px">
+    <div class="media">
+      <img class="rounded-circle account-img" src="{{user.profile.image.url}}" alt="{{user}}">
+      <div class="media-body">
+        <h2 class="account-heading">{{user.username}}</h2>
+        <p class="text-secondary">{{user.email}}</p>
+      </div>
+    </div>
+  <div class="marginTop5px ">
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+      <fieldset class="txt_center">
+        {{ u_form|crispy}}
+        {{ p_form|crispy }}
+        <button class="" style="margin-bottom: 15px;background: #e8491d;color: #fff;margin-top: 15px;width: auto; padding: 10px;" type="submit">
+          Güncelle
+        </button>
+      </fieldset>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock body %}
+
+{% block home_btn %}
+{% include "sayfalar/includes/floatingBtns/home_btn.html" %}     
+{% endblock home_btn %}
+
+{% block whatsapp %}
+    {% include "sayfalar/includes/floatingBtns/whatsapp.html" %}
+{% endblock whatsapp %}
+
+{% block callnow %}
+    {% include "sayfalar/includes/floatingBtns/callNow.html" %}
+{% endblock callnow %}
+
+{% block krediBasvur %}
+{% include "sayfalar/includes/floatingBtns/krediBasvur.html" %}
+{% endblock krediBasvur %}
+
+
+

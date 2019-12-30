@@ -1,0 +1,250 @@
+.yorumlar_slider{width: 100%;background-color: #000000;text-align: center;height: 250px;color: #ffffff;position: relative;z-index: -1;border-top: 2px solid #e8491d;border-bottom: 2px solid #e8491d}
+.head{font-weight: bold;font-size: 1.5em;line-height: 1.5em;padding-top: 10px}
+.comment_head{font-size: 1.5rem;line-height: 1.5rem;margin: 3vh 0;padding: 15px 30px}
+.comment_name{font-size: 1.45rem;line-height: 1.45rem}
+.comment_occupation{color: #585858;line-height: 1.25rem}
+.slide1,.slide2,.slide3,.slide4,.slide5,.slide6,.slide7,.slide8,.slide9 {position: absolute;width: 100%}
+.slide1{-webkit-animation: fade 30s infinite;animation: fade 30s infinite;}
+.slide2{-webkit-animation:fade2 30s infinite;animation: fade2 30s infinite;}
+.slide3{-webkit-animation:fade3 30s infinite;animation: fade3 30s infinite;}
+.slide4{-webkit-animation:fade4 30s infinite;animation: fade4 30s infinite;}
+.slide5{-webkit-animation:fade5 30s infinite;animation: fade5 30s infinite;}
+.slide6{-webkit-animation:fade6 30s infinite;animation: fade6 30s infinite;}
+.slide7{-webkit-animation:fade7 30s infinite;animation: fade7 30s infinite;}
+.slide8{-webkit-animation:fade8 30s infinite;animation: fade8 30s infinite;}
+.slide9{-webkit-animation:fade9 30s infinite;animation: fade9 30s infinite;}
+@-webkit-keyframes fade
+{
+  0%{opacity: 1}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 1} 
+}
+@-webkit-keyframes fade2
+{
+   0%{opacity: 0}
+  11%{opacity: 1}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@-webkit-keyframes fade3
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 1}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@-webkit-keyframes fade4
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 1}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@-webkit-keyframes fade5
+{
+   0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 1}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@-webkit-keyframes fade6
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 1}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@-webkit-keyframes fade7
+{
+   0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 1}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@-webkit-keyframes fade8
+{
+   0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 1}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@-webkit-keyframes fade9
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 1} 
+  100%{opacity: 0}
+  }  
+@keyframes fade
+{
+  0%{opacity: 1}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 1} 
+}
+@keyframes fade2
+{
+   0%{opacity: 0}
+  11%{opacity: 1}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@keyframes fade3
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 1}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@keyframes fade4
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 1}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@keyframes fade5
+{
+   0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 1}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@keyframes fade6
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 1}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@keyframes fade7
+{
+   0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 1}
+  77%{opacity: 0}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@keyframes fade8
+{
+   0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 1}
+  88%{opacity: 0} 
+  100%{opacity: 0}
+}
+@keyframes fade9
+{
+  0%{opacity: 0}
+  11%{opacity: 0}
+  22%{opacity: 0}
+  33%{opacity: 0}
+  44%{opacity: 0}
+  55%{opacity: 0}
+  66%{opacity: 0}
+  77%{opacity: 0}
+  88%{opacity: 1} 
+  100%{opacity: 0}
+  }  
+

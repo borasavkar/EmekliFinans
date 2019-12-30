@@ -1,0 +1,46 @@
+{% load static %}
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: black;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'sayfalar/img/Ef_Logo.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="EmekliFinans Logo">
+        <span class="orange font-italic">Emekli</span>Finans<span class="sup">&reg;</span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">Biz Kimiz <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Bize Ulaşın</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kredi Başvurusu</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hizmetlerimiz</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Emekliye Kredi</a>
+                    <a class="dropdown-item" href="#">Ptt Kredi</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'posts' %}">Yorumlarınız</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'post-create' %}">Yorum Yap</a>
+            </li>
+            <ul class=" nav justify-content-end">
+            {% if user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">{{user}}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Çıkış Yap</a></li>
+            {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Giriş Yap</a></li>
+                <li iclass="nav-link"><a class="nav-link" href="{% url 'register' %}">Kayıt Ol</a></li>
+            {% endif %}
+            </ul>
+        </ul>
+    </div>
+</nav>

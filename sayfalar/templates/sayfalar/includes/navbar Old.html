@@ -1,0 +1,25 @@
+<!-- NAVBAR -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'sayfalar/css/Global.css' %}">
+<link rel="stylesheet" href="{% static 'sayfalar/css/navbar.css' %}">
+<nav class="height50px zIndex1 navbar">
+    <div class="logo_div"><a href="{% url 'home' %}" class="logo_a"><span class="highlight">Emekli</span><span class="italic white">Finans<span class="sup">&reg;</span></span></a>
+    </div>
+    <input type="checkbox" id="nav" class="hidden" />
+    <label for="nav" class="nav-open"><i></i><i></i></label>
+    <div class="nav-container">
+        <ul class="menu">
+            <li id="aboutLink_navbar"><a href="{% url 'about' %}">Biz Kimiz</a></li>
+            <li id="contactLink_navbar"><a href="{% url 'contact' %}">Bize Ulaşın</a></li>
+            <li id="basvuruLink_navbar"><a href="{% url 'basvuru' %}">Kredi Başvurusu</a></li>
+            <li class="dropdown"><a id="dropbtn">Hizmetlerimiz<span class="arrow">&#9660;</span></a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'EmekliyeKredi' %}" id="dropdown-item1" class="dropdown-item">Emekliye Kredi</a></li>
+                    <li><a href="{% url 'SicilBozuk' %}" id="dropdown-item2" class="dropdown-item">Sicili Bozuk</a></li>
+                    <li><a href="{% url 'ptt_kredi' %}" id="dropdown-item3" class="dropdown-item">PTT Kredi</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- #NAVBAR -->

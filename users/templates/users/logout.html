@@ -1,0 +1,36 @@
+{% extends 'sayfalar/layout.html' %}
+{% load static %}
+
+{% block body %}
+<div class=" content txt_center marginTop100px">
+<h3 class="">Başarı ile çıkış yapıldı</h3>
+<div class="marginTop5px">
+        <a class="" href="{% url 'login' %}"> Tekrar Giriş Yap</a>
+</div>
+</div>
+{% endblock body %}
+
+{% block home_btn %}
+{% include "sayfalar/includes/floatingBtns/home_btn.html" %}     
+{% endblock home_btn %}
+
+{% block modalKredi %}
+{% include "sayfalar/includes/modal.html" %}
+{% endblock modalKredi %}
+
+{% block whatsapp %}
+{% include "sayfalar/includes/floatingBtns/whatsapp.html" %}
+{% endblock whatsapp %}
+
+{% block callnow %}
+{% include "sayfalar/includes/floatingBtns/callNow.html" %}
+{% endblock callnow %}
+
+{% block krediBasvur %}
+{% include "sayfalar/includes/floatingBtns/krediBasvur.html" %}
+{% endblock krediBasvur %}
+
+{% block tel %}
+{% include "sayfalar/includes/floatingBtns/tel.html" %}  
+{% endblock tel %}
+

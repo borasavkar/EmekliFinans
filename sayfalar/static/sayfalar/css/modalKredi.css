@@ -1,0 +1,337 @@
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    -ms-transition: opacity 400ms ease-in;
+    -o-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.modalDialog>div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000
+}
+
+.close:hover {
+    background: #ff0000
+}
+
+@media screen and (max-width: 768px) {
+    .modalDialog>div {
+        width: 80%;
+    }
+    .evet,
+    .hayir {
+        font-size: 2vw;
+    }
+}
+
+#uyari,
+#uyariAd,
+#uyariTel {
+    color: #e8491d;
+    text-align: center
+}
+
+
+/*W3Schools */
+
+
+/* Mark input boxes that gets an error on validation: */
+
+input.invalid {
+    background-color: #ffdddd;
+    border-color: red
+}
+
+
+/* Hide all steps by default: */
+
+.tab {
+    display: none
+}
+
+
+/* Make circles that indicate the steps of the form: */
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5
+}
+
+
+/* Mark the active step: */
+
+.step.active {
+    opacity: 1
+}
+
+
+/* Mark the steps that are finished and valid: */
+
+.step.finish {
+    background-color: #4CAF50
+}
+
+
+/* EDIT FORM BYBORA */
+
+#regForm {
+    text-align: center
+}
+
+.header h1 {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.header h2 {
+    color: #e8491d;
+    font-size: 7px;
+    margin-top: 0px;
+    margin-bottom: 10px
+}
+
+.form_Input {
+    margin-top: 2vh
+}
+
+.form_Input label {
+    font-size: 15px;
+    font-weight: bold
+}
+
+#uyari {
+    color: #e8491d;
+    text-align: center;
+    margin-top: 1vh
+}
+
+.emptyField {
+    color: #e8491d;
+    text-align: center;
+    margin-top: 1vh
+}
+
+select,
+input {
+    padding: 5px;
+    width: 70%;
+    font-size: 15px;
+    border: 2px solid #aaaaaa;
+    border-style: solid;
+    -moz-box-shadow: 5px 5px 5px gray;
+    -webkit-box-shadow: 5px 5px 5px 1px gray;
+    box-shadow: 5px 5px 5px 1px gray;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+
+/*evet hayır*/
+
+.checkbox_Buttons {
+    margin-top: 5px
+}
+
+.evet,
+.hayir {
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    background-color: #fff;
+    width: 30%;
+    height: 40px;
+    text-transform: uppercase;
+    margin: 0 20px;
+    -webkit-border: 2px solid #000;
+    border: 2px solid #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block
+}
+
+.evet {
+    border: 2px solid #4CAF50
+}
+
+.hayir {
+    border: 2px solid #ff0000
+}
+
+.evet:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.evet:active {
+    background-color: #4CAF50;
+    -webkit-box-shadow: 0 5px #666;
+    -moz-box-shadow: 0 5px #666;
+    -o-box-shadow: 0 5px #666;
+    -ms-box-shadow: 0 5px #666;
+    box-shadow: 0 5px #666;
+    -webkit-transform: translate(4px);
+    -moz-transform: translate(4px);
+    -ms-transform: translate(4px);
+    -o-transform: translate(4px);
+    transform: translate(4px);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.hayir:hover {
+    background-color: #ff0000;
+    color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.hayir:active {
+    background-color: #ff0000;
+    -webkit-box-shadow: 0 5px #666;
+    -moz-box-shadow: 0 5px #666;
+    -o-box-shadow: 0 5px #666;
+    -ms-box-shadow: 0 5px #666;
+    box-shadow: 0 5px #666;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-transform: translate(4px);
+    -moz-transform: translate(4px);
+    -ms-transform: translate(4px);
+    -o-transform: translate(4px);
+    transform: translate(4px)
+}
+
+
+/*End Of evethayır*/
+
+
+/*NextPrev BUTTONS */
+
+#nextBtn {
+    float: right;
+    background: #1AFF00;
+    padding: 10px;
+	-webkit-border: 1px solid #000;
+	border: 1px solid #000;	
+    color: #fff;
+    margin: 10px
+}
+
+#prevBtn {
+    float: left;
+    background: #ff0000;
+    padding: 10px;
+	-webkit-border: 1px solid #000;
+    border: 1px solid #000;
+    color: #fff;
+    margin: 10px
+}
+
+
+/*END of NextPrev BUTTONS */
+
+
+/*FORM ATTRIBUTES*/
+
+.form_Input input:focus {
+    border-top-color: blueviolet;
+    zoom: 1.3
+}
+
+.form_Input input:valid {
+    border-left-color: palegreen;
+    border-right-color: palegreen
+}
+
+.form_Input input:invalid {
+    border-left-color: red;
+    border-right-color: red
+}
+
+#tcno:placeholder-shown {
+    border-left-color: red;
+    border-right-color: red
+}
+
+#tcno:not(:placeholder-shown) {
+    border-left-color: palegreen;
+    border-right-color: palegreen
+}
+
+#krediTutari:placeholder-shown {
+    border-left-color: red;
+    border-right-color: red
+}
+
+#krediTutari:not(:placeholder-shown) {
+    border-left-color: palegreen;
+    border-right-color: palegreen
+}
+
+
+/* Uyari */
+
+#uyariAd {
+    padding: 0.5em 0 0 0
+}

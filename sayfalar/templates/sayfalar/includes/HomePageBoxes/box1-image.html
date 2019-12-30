@@ -1,0 +1,21 @@
+{% load static %}
+{% load webp_converter %}
+<!-- BOXES -->
+<div class="boxes max1920px" style="margin-top: 50px;" >
+    <!-- BOX1 -->
+    <div class="box">
+        <div class="containerEF">
+            <!-- <picture>
+                <source srcset="{% static 'sayfalar/img/Rahat_EmekliFinans.webp' type="image/webp" %}">
+                <img class="width100" id="rahat" src="{% static 'sayfalar/img/Rahat_EmekliFinans.jpg' %}" alt="emekli finans">
+            </picture> -->
+            <img class="width100" id="rahat" src="{% static_webp 'sayfalar/img/Rahat_EmekliFinans.jpg' 75 %}" alt="emekli finans">
+            <div class="sliderTop">
+                <div class="centered italic bold white shadow-black animated zoomOutDown topSlider1">Her emeklinin hakkıdır rahat yaşamak
+                </div>
+                <div class="centeredTop italic bold white shadow-black animated zoomInDown topSlider2">Rahat Bir Emeklilik için <span class="highlight">Emekli</span><span class="italic white">Finans<span class="sup">&reg;</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- END of BOX1 -->

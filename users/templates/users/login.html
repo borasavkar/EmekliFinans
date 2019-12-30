@@ -1,0 +1,61 @@
+{% extends 'sayfalar/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load webp_converter %}
+{% block messages-modal %}
+
+{% endblock messages-modal %}
+
+{% block body %}
+<div class="subnav marginTop50px bold" style="background-color: #e8491d;height: 50px;color: white">
+    <div class="txt_center" style="line-height: 50px">Oturum Açın</div>
+</div>
+ 
+<img class=" width100"  style="height: 55vh" src="{% static_webp 'sayfalar/img/Rahat_EmekliFinans.jpg' %}" alt="emekli finans">
+<div class="centeredTop marginTop100px">
+    <form method="POST">{% csrf_token %}
+        <fieldset class="txt_center">
+            <div class="form-group">
+            {{ form|crispy }}
+            </div>
+            <div class="container">
+            <button class="" style="margin-bottom: 15px;background: #e8491d;color: #fff;margin-top: 15px;width: auto; padding: 10px;" type="submit">
+            Giriş Yap
+            </button>
+            <small class="text-muted ml-2" > 
+                <a class="" style="color:white" href="{% url 'password-reset' %}">Şifrenizi Mi Unuttunuz?</a>
+            </small>
+            </div>
+
+            {% comment %} <div class="font-weight-bolder ml-3" style="position: relative;margin-top: 5px">Şifrenizi Hatırlamıyor Musunuz?
+                <a class="bold" style="position: relative;margin-top: 50px;text-decoration: none;color:#e8491d" href="{% url 'password-reset' %}"> Şifre Sıfırla</a>
+            </div> {% endcomment %}
+            <a class="bold" style="color:white" href="{% url 'register' %}"><div class="text-muted ml-2"><div style="color:#e8491d">Hesabınız Yok Mu?</div>
+                 Hemen Kayıt Ol</a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+{% endblock body %}
+
+{% block home_btn %}
+    {% include "sayfalar/includes/floatingBtns/home_btn.html" %}     
+{% endblock home_btn %}
+
+{% block modalKredi %}
+{% include "sayfalar/includes/modal.html" %}
+{% endblock modalKredi %}
+
+{% block whatsapp %}
+    {% include "sayfalar/includes/floatingBtns/whatsapp.html" %}
+{% endblock whatsapp %}
+
+{% block callnow %}
+    {% include "sayfalar/includes/floatingBtns/callNow.html" %}
+{% endblock callnow %}
+
+{% block krediBasvur %}
+{% include "sayfalar/includes/floatingBtns/krediBasvur.html" %}
+{% endblock krediBasvur %}
+

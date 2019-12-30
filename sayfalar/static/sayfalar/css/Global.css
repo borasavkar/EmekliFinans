@@ -1,0 +1,206 @@
+/*Global */
+html * {
+    font-family: 'Lora', serif;    
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+img {
+    pointer-events: none;    
+}
+.htmlMaxWidth{max-width: 1920px;margin: 0 auto}
+.content {
+    min-height: calc(100vh - 120px);
+}
+
+.highlight {
+    color: #e8491d;
+    font-weight: bold;
+    font-style: italic
+}
+.finans {
+    font-style: italic;
+    color: white
+}
+.sup {
+    font-size: 40%;
+    vertical-align: text-top
+}
+a:active,
+a:visited,
+a:link {
+    text-decoration: none
+}
+.hidden {
+    display: none
+}
+.flipped {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+	-webkit-filter: "FlipH";
+	-moz-filter: "FlipH";
+	-o-filter: "FlipH";
+	-ms-filter: "FlipH";
+    filter: FlipH;    
+}
+/*COLORS*/
+.blue {
+    color: #2196F3
+}
+.orange2 {
+    color: #fc531d
+}
+.orange {
+    color: #e8491d
+}
+.white {
+    color: #ffffff
+}
+.black {
+    color: #000000
+}
+.bg_wihte {
+    background: #ffffff
+}
+.bg_black {
+    background: #000000
+}
+#bg-colored2 {
+    background: linear-gradient(to bottom, #fff 0%, #000000 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e8491d', endColorstr='#ffffff', GradientType=0);
+    margin-top: 1vh;
+}
+/*POSITIONIG*/
+.txt_center {
+    text-align: center
+}
+.display_Inline_Block {
+    display: inline-block
+}
+.float_right {
+    float: right
+}
+.float_left {
+    float: left
+}
+.bottom0 {
+    bottom: 0
+}
+/*WIDTH&HEIGHT*/
+.width100 {
+    width: 100%
+}
+.width_auto {
+    width: auto
+}
+.heightAuto {
+    height: auto
+}
+.height100 {
+    height: 100%
+}
+.height250px {
+    height: 250px
+}
+.height200px {
+    height: 200px
+}
+.height300px {
+    height: 300px
+}
+.heightInherit {
+    height: inherit
+}
+/*FONT STYLE*/
+.underline {
+    text-decoration: underline
+}
+.bold {
+    font-weight: bold
+}
+.italic {
+    font-style: italic
+}
+.fontsize_30 {
+    font-size: 30px
+}
+.fontsize_20 {
+    font-size: 20px
+}
+.fontsize_40 {
+    font-size: 40px
+}
+.fontsize_10 {
+    font-size: 10px
+}
+/*MARGIN&PADDINGS*/
+.marginTop45px {
+    margin-top: 45px
+}
+.marginTop50px {
+    margin-top: 50px
+}
+.marginTop100px {
+    margin-top: 100px
+}
+.marginLeft1vw {
+    margin-left: 1vw
+}
+.marginTop5px {
+    margin-top: 5px
+}
+.paddingBottom50px {
+    padding-bottom: 50px
+}
+/*Z-Index*/
+.zIndex1 {
+    z-index: 1
+}
+.zIndex2 {
+    z-index: 2
+}
+.zIndex999 {
+    z-index: 999
+}
+.zIndex-1 {
+    z-index: -1
+}
+.zIndex-2 {
+    z-index: -2
+}
+/*shadows*/
+.shadow-orange {
+    text-shadow: 4px 4px 4px #e8491d
+}
+.shadow-white {
+    text-shadow: 4px 4px 4px #fff
+}
+.shadow-white1px {
+    text-shadow: 1px 1px 1px #fff
+}
+.shadow-google {
+    text-shadow: 4px 4px 4px #aaa;
+}
+.shadow-blue {
+    text-shadow: 4px 4px 4px #00A2FF
+}
+.shadow-black {
+    text-shadow: 4px 4px 4px #000000
+}
+.shadow-gray {
+    text-shadow: 4px 4px 4px #666565
+}
+/*TRANSLATE*/
+.rotate45deg {
+-webkit-transform: rotate(-15deg);
+-ms-transform: rotate(-15deg);
+    transform: rotate(-15deg)
+}

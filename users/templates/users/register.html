@@ -1,0 +1,30 @@
+{% extends 'sayfalar/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'sayfalar/css/button_press_effect.css' %}">
+{% endblock css %}
+{% block body %}
+<div class="subnav marginTop50px bold" style="background-color: #e8491d;height: 50px;color: white">
+    <div class="txt_center" style="line-height: 50px">Kayıt Ol</div>
+</div>
+<div class="content marginTop5px ">
+    <form method="POST">{% csrf_token %}
+        <fieldset class="form-group txt_center">
+            {{ form|crispy }}
+        </fieldset>
+            {% comment %} <button class="" style="margin-bottom: 15px;background: #e8491d;color: #fff;margin-top: 15px;width: auto; padding: 10px;border-radius: 8px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" type="submit"> {% endcomment %}
+            <div class="form-group txt_center">
+                <button class="button_press_effect" type="submit">
+                Kayıt Ol
+            </button>
+            </div>
+    </form>
+<div class="txt_center border-top pt-3">
+    <small class="bold text-muted">
+        Zaten Hesabınız Var Mı?
+        <a class="marginLeft1vw" href="{% url 'login' %}"> Giriş Yap</a>
+    </small>
+</div>
+</div>
+{% endblock body %}
